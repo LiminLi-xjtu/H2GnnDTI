@@ -135,9 +135,9 @@ class IGAE(nn.Module):
             n_input=n_input)
 
 # Dual Correlation Reduction Network
-class DCRN(nn.Module):
+class H2GNN(nn.Module):
     def __init__(self, n_node=None,dropout = 0.3):
-        super(DCRN, self).__init__()
+        super(H2GNN, self).__init__()
         # Auto Encoder
         self.ae = AE(
             ae_n_enc_1=opt.args.ae_n_enc_1,
@@ -177,7 +177,6 @@ class DCRN(nn.Module):
         z_tilde = self.gamma * z_g + z_l   ###(447,20)
         x_hat = self.ae.decoder(z_tilde)
         z_hat, z_hat_adj = self.gae.decoder(z_tilde, adj)
-        # adj_hat = z_igae_adj + z_hat_adj
         adj_hat = z_hat_adj
 
         return x_hat, z_hat, adj_hat, z_ae, z_igae, z_tilde
