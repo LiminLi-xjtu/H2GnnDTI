@@ -22,9 +22,10 @@ pip install git+https://github.com/LiminLi-xjtu/H2GnnDTI.git
 1. Prepare the data need for train. Get all msa files of the proteins in datasets (download the dataset.rar and unzip it), and using Pconsc4 to predict all the contact map. A script in the repo can be run to do all the steps:
 ```bash
 python scripts.py
-```Then you can generate two foldes called "aln" and "pconsc4", copy two folders from davis to the /data/davis of your repo, so do the KIBA and DrugBank.
+```
+Then you can generate two foldes called "aln" and "pconsc4", copy two folders from davis to the /data/davis of your repo, so do the KIBA and DrugBank.
 
-2. And if you want to skip the long time preparation, please directly download the contact map and msa files which we already generated from (files). For more detailed generating information, please refer to the "scripts.py". Then copy the corresponding two folders to each dataset dir. 
+2. And if you want to skip the long time preparation, please directly download the contact map and msa files which we already generated from ([files](https://drive.google.com/open?id=1rqAopf_IaH3jzFkwXObQ4i-6bUUwizCv)). For more detailed generating information, please refer to the "scripts.py". Then copy the corresponding two folders to each dataset dir. 
 
 ## Usage
 ```python main.py
