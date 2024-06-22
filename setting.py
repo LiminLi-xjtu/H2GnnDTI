@@ -163,9 +163,9 @@ def process(data_new,nb_drugs,nb_proteins,dataset, foldcount=5,setting = 2):
     protein_set = Data.DataLoader(dataset=protein1, collate_fn=collate2, batch_size=nb_proteins, shuffle=False)
 
     ##划分训练集和测试集
-    # setting2 new-drug
-    if setting == 2:
-        print('------------setting2 new-drug-----------------')
+    # setting1 new-drug
+    if setting == 1:
+        print('------------setting1 new-drug-----------------')
         folds = get_random_folds(nb_drugs, foldcount)
         test_set = folds[4]
         pairs_list = alledges.tolist()
@@ -176,8 +176,8 @@ def process(data_new,nb_drugs,nb_proteins,dataset, foldcount=5,setting = 2):
                 pairs_test.append(x)
         train = np.array(pairs_list)
         test = np.array(pairs_test)
-    if setting == 3:
-        print('------------setting3 new-target-----------------')
+    if setting == 2:
+        print('------------setting2 new-target-----------------')
         folds = get_random_folds(nb_proteins, foldcount)
         test_set = folds[4]
         pairs_list = alledges.tolist()
@@ -188,8 +188,8 @@ def process(data_new,nb_drugs,nb_proteins,dataset, foldcount=5,setting = 2):
                 pairs_test.append(x)
         train = np.array(pairs_list)
         test = np.array(pairs_test)
-    if setting == 4:
-        print('------------setting4 new-dt-----------------')
+    if setting == 3:
+        print('------------setting3 new-dt-----------------')
         folds_drug = get_random_folds(nb_drugs, foldcount)
         folds_protein = get_random_folds(nb_proteins, foldcount)
         test_set_drug = folds_drug[4]
