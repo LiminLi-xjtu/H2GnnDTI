@@ -1,6 +1,6 @@
 # H2GnnDTI
 ## Overview
-![image](https://github.com/LiminLi-xjtu/H2GnnDTI/blob/master/flow.pdf)
+(https://github.com/LiminLi-xjtu/H2GnnDTI/blob/master/flow.pdf)
  H2GnnDTI is a two-level hierarchical heterogeneous graph learning model, to predict DTIs byintegrating the structures of drugs and proteins via low-level graph neural networks (LGNN) and a high-level graph
 neural network(HGNN). The hierarchical graph is a high-level heterogeneous graph with nodes being drugs and proteins and edges being the known DTIs, and each drug or protein node is further represented as a low-level graph with nodes being molecules in each drug or amino acids in each protein with their chemical descriptors. Two low-level graph neural networks are ffrst used to capture the structural and chemical features for drugs and proteins from the low-level graphs, respectively, and a high-level graph encoder is employed to further capture and integrate interactive features for drugs and proteins from the high-level graph. The high-level encoder utilizes a structure and attribute information fusion module which could explicitly merge the representations learned by a feature encoder and a graph encoder for consensus representation learning.
 
