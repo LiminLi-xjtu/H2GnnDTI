@@ -35,5 +35,10 @@ DATASET = "Davis"
 data_new, nb_drugs, nb_proteins = dataload(DATASET)
 nb_all = nb_drugs+nb_proteins
 drug_set, protein_set, adj, labels, idx_train, idx_test,edge = process(data_new, nb_drugs, nb_proteins,DATASET,foldcount=5,setting = 2)
+'''
 
+*change the dataset:DATASET = "Davis" or DATASET = "KIBA" or DATASET = "KIBA"
+*change the settings: New-drug setting = 1,New-target setting = 2,New-dt setting = 3
+
+*change the parameters: opt.py
 
