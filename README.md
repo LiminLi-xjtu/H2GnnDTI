@@ -25,7 +25,7 @@ python scripts.py
 ```
 Then you can generate two foldes called "aln" and "pconsc4", copy two folders from davis to the /data/davis of your repo, so do the KIBA and DrugBank.
 
-2. And if you want to skip the long time preparation, please directly download the contact map and msa files which we already generated from ([files](https://drive.google.com/open?id=1rqAopf_IaH3jzFkwXObQ4i-6bUUwizCv) or [data](https://drive.google.com/drive/folders/1knpaALLCEJyoVWg8tpBTKqcXwJNHFfWd?usp=drive_link)). For more detailed generating information, please refer to the "scripts.py". Then copy the corresponding two folders to each dataset dir. 
+2. And if you want to skip the long time preparation, please directly download the contact map and msa files which we already generated from ([data](https://drive.google.com/drive/folders/1knpaALLCEJyoVWg8tpBTKqcXwJNHFfWd?usp=drive_link)). For more detailed generating information, please refer to the "scripts.py". Then copy the corresponding two folders to each dataset dir. 
 
 ## Usage
 ```python main.py
